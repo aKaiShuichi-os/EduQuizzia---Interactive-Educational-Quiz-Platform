@@ -1,0 +1,177 @@
+.bottom-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom-area,
+.pyramid-wrapper {
+  margin-top: 24px;
+}
+.bottom-area,
+.pyramid-wrapper .sr-readonly {
+  width: 324px;
+  height: 276px;
+  overflow: hidden;
+  position: absolute;
+}
+.bottom-area,
+.empty-pyramid {
+  position: relative;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 276px;
+  width: 324px;
+}
+.bottom-area,
+.pyramid-sections {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 324px;
+  height: 276px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  animation: fadeIn 1s linear forwards;
+}
+.bottom-area,
+.pyramid-sections.pyramid-plant {
+  animation-delay: 1s;
+  background-image: url(../Image/pyramid_plant.png);
+}
+.bottom-area,
+.pyramid-sections.pyramid-rabbit {
+  animation-delay: 2s;
+  background-image: url(../Image/pyramid_rabbit.png);
+}
+.bottom-area,
+.pyramid-sections.pyramid-snake {
+  animation-delay: 3s;
+  background-image: url(../Image/pyramid_snake.png);
+}
+.bottom-area,
+.pyramid-sections.pyramid-eagle {
+  animation-delay: 4s;
+  background-image: url(../Image/pyramid_eagle.png);
+}
+.bottom-area,
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+}
+
+.bottom-area,
+.bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary-attention-dark);
+  border-radius: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.bottom-area,
+.pyramid-button {
+  position: relative;
+  height: 28px;
+  width: fit-content;
+  border-radius: 14px;
+  background-color: var(--secondary-attention-dark);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.bottom-area,
+.dotted-line {
+  box-sizing: border-box;
+  height: 1px;
+  width: 26px;
+  border-bottom: 1px dashed var(--secondary-attention-dark);
+  position: relative;
+  z-index: 1;
+}
+.bottom-area,
+.text-info {
+  color: #35374c;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  text-align: center;
+  position: relative;
+  padding-top: 8px;
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.pyramid-button.label .text {
+  white-space: nowrap;
+}
+.pyramid-button {
+  position: relative;
+  height: 28px;
+  width: fit-content;
+  border-radius: 14px;
+  background-color: #352103;
+  font-size: 12px;
+  padding: 6px 18px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .bottom-area, .button-wrapper.pyramid-plant {
+    top: 450px;
+    bottom: -80px;
+    left:470px;
+  } */
+/*   .bottom-area, .button-wrapper.pyramid-rabbit {
+    top: 300px;
+    bottom: -80px;
+    left:420px;
+  } */
+/*   .bottom-area, .button-wrapper.pyramid-snake {
+    top: 160px;
+    bottom: -80px;
+    left:373px;
+  } */
+/* .bottom-area, .button-wrapper.pyramid-eagle {
+    top: 0px;
+    bottom: -80px;
+    left:320px;
+  } */

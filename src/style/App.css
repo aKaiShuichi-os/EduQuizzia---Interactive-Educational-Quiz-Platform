@@ -1,0 +1,649 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+
+.activity-container {
+  width: 800px;
+  height: 600px;
+}
+
+.popup-container {
+  background: #fbf1e9;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  position: relative;
+  pointer-events: auto;
+  padding: 16px 60px 24px 60px;
+  animation: slide-down 1s ease-in-out forwards;
+  display: flex;
+  flex-direction: row;
+}
+
+.i-icon {
+  width: 32px;
+  height: 32px;
+
+  display: inline-block;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+#description {
+  margin-top: 4px;
+  margin-left: 12px;
+}
+
+.image-container {
+  padding: 0px;
+  margin: 0px;
+}
+
+.image {
+  width: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.btn-container {
+  margin-top: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.btn {
+  padding: 8px;
+  border: none;
+  color: var(--white);
+  border-radius: 8px;
+  position: relative;
+  pointer-events: auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.start {
+  background-color: #352103;
+  color: aliceblue;
+}
+
+.btn span {
+  display: block;
+  pointer-events: none;
+}
+
+.btn .icon {
+  display: block;
+  width: 30px;
+  height: 24px;
+  background-size: contain;
+}
+
+h1 {
+  text-align: left;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 24px;
+  position: relative;
+  letter-spacing: 0.15px;
+  margin-top: 0px;
+}
+
+.btn-text {
+  font-size: 16px;
+  margin-left: 8px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-right: 8px;
+  color: var(--white);
+  letter-spacing: 0.15px;
+}
+
+.home-btn {
+  padding: 6px;
+  background: #f0f0f0;
+  border: 2px solid #35374c !important;
+  margin-left: 6px;
+}
+
+button[type="button"] {
+  margin-right: 8px;
+  pointer-events: auto;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  position: relative;
+  padding-top: 8px;
+}
+
+.left {
+  width: 640px;
+  height: 200%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(238, 232, 232, 0.986);
+}
+
+.pos-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270%;
+  height: 75%;
+}
+
+.left-interactive,
+.pyramid-wrapper {
+  position: relative;
+  width: 430px;
+  margin-top: 24px;
+}
+.empty-pyramid {
+  position: relative;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 276px;
+  width: 324px;
+}
+
+.right {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0px 0 0 30px;
+  margin-top: 10px;
+}
+
+.activity-header {
+  display: flex;
+  margin-left: 30px;
+}
+.container {
+  display: flex;
+  width: 150%;
+  height: 150%;
+}
+
+.image {
+  max-height: 50%;
+}
+.d-block {
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.right-static,
+.intstruction-area,
+.instruction-text-wrapper {
+  width: 212px;
+  height: auto;
+  border: 1px solid #ba5b08;
+  border-radius: 8px;
+  background-color: #fbf1e9;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  /* opacity: 0; */
+}
+
+.bttry {
+  /* background-image: url(../Image/batery0004.png); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 94px;
+  width: 188px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.percentage-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.percentage-indicator p {
+  top: -3px;
+  right: 25px;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  position: absolute;
+  font-variant: lining-nums;
+}
+
+.bttryText {
+  text-align: center;
+}
+
+.myclass {
+  margin-top: 200px;
+}
+.tick-mark-hide {
+  height: 12px;
+  width: 12px;
+  background-image: url(../Image/tick_mark.png);
+  background-size: contain;
+  position: absolute;
+  left: 40px;
+  opacity: 0;
+}
+.tick-mark-show {
+  height: 12px;
+  width: 12px;
+  background-image: url(../Image/tick_mark.png);
+  background-size: contain;
+  position: absolute;
+  left: 40px;
+  opacity: 1;
+}
+
+.completion-screen-container {
+  top: 0;
+  left: 10px;
+  width: 100%;
+  height: 120%;
+  position: absolute;
+  background: rgba(53, 55, 76, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.completion-screen-container .completion-screen {
+  width: 390px;
+  position: relative;
+}
+.completion-screen-container .completion-screen .grass-left,
+.completion-screen-container .completion-screen .leaves-left,
+.completion-screen-container .completion-screen .grass-leaves-right {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.completion-screen-container .completion-screen .grass-left {
+  top: 60px;
+  left: -90px;
+  width: 109px;
+  height: 122px;
+  background-image: url(../Image/grass_left.svg);
+}
+.completion-screen-container .completion-screen .leaves-left {
+  top: -50px;
+  left: -57px;
+  width: 66px;
+  height: 218px;
+  background-image: url(../Image/leaves_left.svg);
+}
+.completion-screen-container .completion-screen .grass-leaves-right {
+  top: -25px;
+  right: -55px;
+  width: 286px;
+  height: 123px;
+  background-image: url(../Image/grass_leaves_right.svg);
+}
+.completion-screen-container .completion-screen .completion-screen-content {
+  width: 100%;
+  padding: 32px;
+  position: relative;
+  border-radius: 32px;
+  background: transparent;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.completion-screen-container
+  .completion-screen
+  .completion-screen-content
+  div.icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.completion-screen-container
+  .completion-screen
+  .completion-screen-content
+  .heading {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 36px;
+}
+.completion-screen-container
+  .completion-screen
+  .completion-screen-content
+  .content {
+  font-weight: 550;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+}
+.completion-screen-container
+  .completion-screen
+  .completion-screen-content
+  .completion-screen-button {
+  margin-top: 18px;
+}
+.completion-screen-container
+  .completion-screen.positive
+  .completion-screen-content {
+  border-color: var(--secondary-positive-dark);
+  color: var(--secondary-positive-dark);
+  background: var(--secondary-positive-light);
+}
+.completion-screen-container
+  .completion-screen.positive
+  .completion-screen-content
+  div.icon {
+  background-image: url(../Image/positive_icon.svg);
+}
+.completion-screen-container .completion-screen.attention .grass-leaves-right {
+  background-image: url(../Image/grass_leaves_right_attention.svg);
+}
+.completion-screen-container
+  .completion-screen.attention
+  .completion-screen-content {
+  border-color: var(--secondary-attention-dark);
+  color: var(--secondary-attention-dark);
+  background: var(--secondary-attention-light);
+}
+.completion-screen-container
+  .completion-screen.attention
+  .completion-screen-content
+  div.icon {
+  background-image: url(../Image/attention_right_icon.svg);
+}
+
+.mcq-question-area {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -60px;
+}
+.mcq-question-area .inner-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.mcq-question-area .inner-wrapper .heading {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  font-style: italic;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+  color: var(--question-heading-bluish);
+  font-variant: lining-nums;
+}
+.mcq-question-area .inner-wrapper .question {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 18px;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  color: var(--question-text-blue);
+}
+.mcq-question-area .inner-wrapper .submit-button {
+  width: 100%;
+  bottom: 24px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mcq-question-area
+  .inner-wrapper
+  .radiobuttons
+  .radiobutton
+  .radiobutton-inner-wrapper {
+  align-items: left;
+}
+.mcq-question-area
+  .inner-wrapper
+  .radiobuttons
+  .radiobutton
+  .radiobutton-inner-wrapper
+  input[type="radio"]
+  + div
+  + label {
+  font-size: 18px;
+  color: #35374c;
+  font-weight: 500;
+  line-height: 20px;
+}
+.right .mcq-question-area .inner-wrapper {
+  height: auto;
+  margin-top: 80px;
+}
+.right .mcq-question-area .inner-wrapper .submit-button {
+  bottom: unset;
+  margin-top: 24px;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.mcq-question-area .inner-wrapper .radiobuttons {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.myonlypyramid{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .pyramid-sections {
+  
+  position: absolute;
+  left: 0;
+  top: 290px;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 276px;
+  width: 324px;
+  pointer-events: none;
+  display: flex;
+} */
+
+/* 
+.left-interactive, .pyramid-wrapper {
+  position: relative;
+  width: 430px;
+  margin-top: 24px;
+}
+
+.left-interactive, .empty-pyramid {
+  position: relative;
+  background-image: url(../Image/pyramid_empty.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 276px;
+  width: 324px;
+}
+
+.left-interactive, .pyramid-eagle {
+  background-image: url(../Image/pyramid_eagle.png);
+}
+.left-interactive, .pyramid-sections {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 276px;
+  width: 324px;
+  pointer-events: none;
+  display: flex;
+}
+
+.left-interactive, .button-wrapper,.pyramid-eagle {
+  top: 23px;
+  left: 178px;
+}
+
+.left-interactive, .button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+}
+
+.left-interactive, .bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #352103;
+  border-radius: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.left-interactive, .dotted-line {
+  box-sizing: border-box;
+  height: 1px;
+  width: 26px;
+  border-bottom: 1px dashed #352103;
+  position: relative;
+  z-index: 1;
+}
+
+.btn.hotspot-btn.label {
+  background-color: #352103;
+  border-radius: 30px;
+  padding: 6px 16px;
+}
+.left-interactive, .pyramid-button {
+  position: relative;
+  height: 28px;
+  width: fit-content;
+  border-radius: 14px;
+  background-color: #352103;
+  font-size: 12px;
+  padding: 6px 18px !important;
+}
+.btn {
+  padding: 8px;
+  border: none;
+  color: var(--white);
+  border-radius: 8px;
+  position: relative;
+  pointer-events: auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+[type="button"] {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.left-interactive .pyramid-button.label .text {
+  white-space: nowrap;
+}
+
+.btn.hotspot-btn.label .text {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  font-weight: 100;
+  margin: 0;
+  padding-top: 1px;
+}
+.btn span {
+  display: block;
+  pointer-events: none;
+}
+
+.btn .icon {
+  width: 24px;
+  height: 24px;
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.left-interactive .tick-mark {
+  height: 12px;
+  width: 12px;
+  background-image: url(../Image/tick_mark.png);
+  background-size: contain;
+  position: absolute;
+  left: 40px;
+  top: 2px;
+  opacity: 0;
+}
+
+
+element.style {
+}
+.left-interactive .pyramid-sections.pyramid-plant, .left-interactive .pyramid-sections.pyramid-rabbit, .left-interactive .pyramid-sections.pyramid-snake, .left-interactive .pyramid-sections.pyramid-eagle {
+    opacity: 0;
+}
+.left-interactive, .pyramid-sections.pyramid-snake {
+    background-image: url(../Image/pyramid_snake_.png);
+}
+.left-interactive, .pyramid-sections {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 276px;
+    width: 324px;
+    pointer-events: none;
+    display: flex;
+} */;
